@@ -1,0 +1,20 @@
+.content{
+
+    background-color: #222;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+
+
+.ComixList {
+    display: grid; /* Используем grid для распределения комиксов */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Распределяем комиксы по разным краям страницы */
+    grid-column-gap: 100px; /* Устанавливаем промежуток между колонками комиксов */
+    grid-row-gap: 20px; /* Устанавливаем меньший промежуток между строками комиксов */
+    list-style: none; /* Удаляем маркеры списка */
+    max-width: 950px;
+    padding: 0; /* Удаляем отступы вокруг списка */
+}
+
+

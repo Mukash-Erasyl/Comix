@@ -1,0 +1,59 @@
+
+
+.comixImg {
+  width: 210px;
+  height: 290px;
+  background-color: #6F2232;
+  border-radius: 10px;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Центрируем изображение по вертикали и горизонтали */
+  
+}
+
+.comixImg img {
+  max-width: 200px;
+  max-height: 285px;
+  width: 200px;
+  height: 280px;
+  border-radius: 8px;
+}
+
+.comixInfo {
+  margin-top: -10px;
+  width: 200px; 
+}
+
+.comixTitle {
+  margin-left: 5px;
+  
+}
+
+.comixDesc {
+  max-width: 210px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет тегам переноситься на новую строку при переполнении */
+  gap: 5px; /* Добавляет отступы между тегами */
+}
+
+.tag {
+  background-color: #666;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 2px;
+  text-align: center;
+  white-space: nowrap; /* Запрещает перенос текста внутри тега */
+  cursor: pointer; /* Изменяет курсор при наведении */
+}
+
+
+

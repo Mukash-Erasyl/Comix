@@ -1,0 +1,72 @@
+.ComixDetail{
+    background-color: #222;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+.ComixDetail button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ComixDetail button:hover {
+    background-color: #0056b3;
+}
+
+.comixDescription {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Промежуток между блоками */
+}
+
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Добавляет промежуток между изображениями */
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.metaInfo {
+    display: flex;
+}
+
+.contentInfo {
+    display: flex;
+}
+
+
+
+.comixInfo {
+    flex: 1; /* Занимает оставшееся пространство */
+}
+
+.comixContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрирование содержимого */
+    gap: 20px; /* Промежуток между изображениями */
+    margin-top: 100px; /* Отступ сверху */
+}
+
+.imageComix img {
+    max-width: 100%; /* Изображение не превышает ширину контейнера */
+    height: auto;
+    border-radius: 10px;
+}
