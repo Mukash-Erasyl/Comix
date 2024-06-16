@@ -7,6 +7,7 @@
     margin: auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    
 }
 
 
@@ -28,6 +29,7 @@
     display: flex;
     align-items: flex-start; /* Выравнивание по верхнему краю */
     gap: 20px; /* Промежуток между блоками */
+    margin-bottom: 50px;
 }
 
 
@@ -45,10 +47,35 @@
 
 .metaInfo {
     display: flex;
+    align-items: center;
+    gap: 10px; /* Отступы между элементами */
+}
+
+.metaInfo div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Отступы между иконкой и текстом */
+    background-color: #666; /* Фон для каждого div */
+    color: white; /* Цвет текста */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Запрещает перенос текста внутри тега */
+    cursor: pointer; /* Изменяет курсор при наведении */
+    width: 100px; /* Фиксированная ширина */
+    height: 25px; /* Фиксированная высота */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    text-align: center; /* Центрирует текст по горизонтали */
+}
+
+.top img {
+    margin-top: -5px;
 }
 
 .contentInfo {
     display: flex;
+    
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+    font-weight: 300; /* Set the font weight to 300 (thin) */
 }
 
 
@@ -60,13 +87,48 @@
 .comixContent {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Центрирование содержимого */
-    gap: 20px; /* Промежуток между изображениями */
-    margin-top: 100px; /* Отступ сверху */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    gap: 10px; /* Отступы между изображениями */
+    text-align: center;
+}
+
+.imageComix {
+    min-width: 850px; /* Минимальная ширина контейнера */
+    display: flex;
+    justify-content: center; /* Центрирование изображения внутри контейнера */
 }
 
 .imageComix img {
-    max-width: 100%; /* Изображение не превышает ширину контейнера */
-    height: auto;
-    border-radius: 10px;
+    max-width: 100%; /* Ограничение ширины изображения размером контейнера */
+    width: 650px; /* Ширина изображения */
 }
+
+
+.comixTitleDetail {
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive; /* Выбор шрифта */
+    font-size: 1.5em; /* Увеличение размера шрифта */
+    font-weight: bold; /* Сделать текст жирным */
+    
+    color: #fff; /* Цвет текста */
+    text-shadow: 2px 2px #B96B85; /* Тень для текста, чтобы придать ему эффект */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+
+
+.textInfo {
+    font-family: 'Indie Flower', cursive; /* Use the 'Indie Flower' font for .textInfo */
+    font-weight: 700;
+}
+
+  
+  .detailEl {
+    padding: 10px;
+    background-color: #333; /* Change to your desired background color */
+    border-radius: 10px;
+  }
+  
+
+  .detailEl .contentInfo {
+    opacity: .8;
+  }

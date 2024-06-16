@@ -1,6 +1,7 @@
 .content{
 
     background-color: #222;
+    border: 2px solid white;
     color: #fff;
     padding: 10px 30px;
     border-radius: 15px;
@@ -18,3 +19,7 @@
 }
 
 
+
+.peginationClass {
+    margin-top: 50px;
+}

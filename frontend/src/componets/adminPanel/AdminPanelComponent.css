@@ -1,0 +1,50 @@
+.admin-panel-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .admin-panel-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .admin-panel-form input[type="text"],
+  .admin-panel-form input[type="number"],
+  .admin-panel-form textarea,
+  .admin-panel-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .admin-panel-form input[type="file"] {
+    padding-top: 5px;
+  }
+  
+  .admin-panel-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .admin-panel-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .adminPanelContent{
+    background-color: #222;
+    border: 2px solid white;
+    padding: 50px;
+    border-radius: 15px;
+  }

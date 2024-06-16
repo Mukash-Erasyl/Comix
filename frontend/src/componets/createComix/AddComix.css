@@ -1,0 +1,68 @@
+/* Основные стили для формы */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Стили для полей ввода и textarea */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Стили для checkbox */
+input[type="checkbox"] {
+    margin: 0 10px 0 0;
+}
+
+/* Стили для меток */
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Стили для кнопки */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Дополнительные стили */
+div {
+    margin-bottom: 10px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+

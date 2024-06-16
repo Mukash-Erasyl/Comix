@@ -3,6 +3,7 @@ package com.Jabai.WebShop.domain;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection = "comix")
@@ -15,7 +16,7 @@ public class Comix {
     private String description;
     @ElementCollection
     private List<String> genre;
-    private int year;
+    private String year;
     private String publisher;
 
     @Enumerated(EnumType.STRING)
@@ -26,17 +27,19 @@ public class Comix {
     private List<String> tags;
     private boolean inTop;
     @ElementCollection
-    private List<String> images;
+    private List<String> images = new ArrayList<>();
     @ElementCollection
     private List<Languages> translations;
     @ElementCollection
-    private List<Long> similarComix;
+    private List<String> similarComix;
+
+    private int views = 0;
 
     public Comix() {
         // Пустой конструктор
     }
 
-    public Comix(String title, String description, List<String> genre, int year, String publisher, Status status, String coverImage, List<String> tags, boolean inTop, List<String> images, List<Languages> translations, List<Long> similarComix) {
+    public Comix(String title, String description, List<String> genre, String year, String publisher, Status status, String coverImage, List<String> tags, boolean inTop, List<String> images, List<Languages> translations, List<String> similarComix ) {
         this.title = title;
         this.description = description;
         this.genre = genre;
@@ -49,6 +52,7 @@ public class Comix {
         this.images = images;
         this.translations = translations;
         this.similarComix = similarComix;
+
     }
 
     // Геттеры и сеттеры
@@ -84,11 +88,11 @@ public class Comix {
         this.genre = genre;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -150,27 +154,23 @@ public class Comix {
         this.translations = translations;
     }
 
-    public List<Long> getSimilarComix() {
+    public List<String> getSimilarComix() {
         return similarComix;
     }
 
-    public void setSimilarComix(List<Long> similarComix) {
+    public void setSimilarComix(List<String> similarComix) {
         this.similarComix = similarComix;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
     }
 }
 
 
 
- enum Status {
-    CLOSED,
-    ONGOING,
-    ETC
-}
 
-
- enum Languages {
-    ENGLISH,
-    FRENCH,
-    SPANISH,
-    ETC
-}

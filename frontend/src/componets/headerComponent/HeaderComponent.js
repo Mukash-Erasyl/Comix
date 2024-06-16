@@ -1,18 +1,17 @@
 import React from 'react';
-import styles from './Header.module.css'; // Импорт модульных стилей для компоненты
+import styles from './Header.module.css'; // Импорт модульных стилей для компонента
+import logo from '../../img/logo.png'; // Импорт логотипа
+import TextField from './TextField/TextFieldComponent';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>Логотип</div>
-      <nav className={styles.nav}>
-        <ul className={styles.navList}>
-          <li className={styles.navItem}><a href="#" className={styles.navLink}>Главная</a></li>
-          <li className={styles.navItem}><a href="#" className={styles.navLink}>О нас</a></li>
-          <li className={styles.navItem}><a href="#" className={styles.navLink}>Услуги</a></li>
-          <li className={styles.navItem}><a href="#" className={styles.navLink}>Контакты</a></li>
-        </ul>
-      </nav>
+      <div className={styles.logoContainer}>
+        <img src={logo} alt="Логотип" className={styles.logo} />
+      </div>
+      <div className={styles.finder}>
+        <TextField />
+      </div>
     </header>
   );
 }

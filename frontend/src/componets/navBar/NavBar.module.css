@@ -1,6 +1,8 @@
 .navBar {
   color: red;
-  background-color: #6F2232;
+  background-color: #222;
+  border: 2px solid white;
+  /* background-color: #6F2232; */
   color: #fff;
   padding: 10px 20px;
   border-radius: 15px; 
