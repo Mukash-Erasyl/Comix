@@ -1,33 +1,23 @@
 package com.Jabai.WebShop.domain;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "users")
 public class User {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
+    private String username;
+    private String password;
 
-    private String username; // Имя пользователя
-    private String email; // Электронная почта пользователя
-    private String password; // Пароль пользователя (здесь предполагается, что пароль хранится в зашифрованном виде)
+    // Getters and setters
 
-    public User() {
-        // Пустой конструктор
-    }
-
-    public User(String username, String email, String password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
-
-    // Геттеры и сеттеры
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -37,14 +27,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPassword() {
