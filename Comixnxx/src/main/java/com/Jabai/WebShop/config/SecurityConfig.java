@@ -70,8 +70,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService inMemoryUserDetailsService() {
         // Create an in-memory user for testing purposes
         UserDetails user = User.builder()
-                .username("admin")
-                .password(passwordEncoder().encode("password"))
+                .username("BigLover")
+                .password(passwordEncoder().encode("sWeetheart76&"))
                 .roles("USER")
                 .build();
 

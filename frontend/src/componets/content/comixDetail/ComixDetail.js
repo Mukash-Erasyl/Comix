@@ -23,7 +23,7 @@ const ComixDetail = () => {
 
     return (
         <div className="ComixDetail">
-            
+
             <div className='comixDescription'>
                 <div className="comixImg">
                     <img src={comix.coverImage} alt="Comix cover" /> {/* Изменен alt атрибут */}
@@ -37,54 +37,69 @@ const ComixDetail = () => {
 
 
                     <div className='metaInfo'>
-                        <div className='views contentInfo'><img src={viewPng} width={30} alt="Top Icon"/> <p>{comix.views}</p></div>
+                        <div className='views contentInfo'><img src={viewPng} width={30} alt="Top Icon" /> <p>{comix.views}</p></div>
                         <div className='dateComix contentInfo'>{comix.year}</div>
                         <div className='status contentInfo'>{comix.status}</div>
                         {comix.inTop && <div className='top'>  <img src={onTopPng} width={30} alt="Top Icon" /></div>}
                     </div>
 
-                    <div className='translation detailEl'>
-                        <div className='textInfo'>Переводчики</div>
-                        <div className='contentInfo'>
-                            {comix.translations.map((translation, index) => (
-                                <div className="tag" key={index}>{translation}</div>
-                            ))}
-                        </div>
-                    </div>
 
-                    <div className='publisher detailEl'>
-                        <div className='textInfo'>Автор: </div>
+                </div>
 
-                        <div className='contentInfo'>{comix.publisher}</div>
+            </div>
 
 
-                    </div>
 
-                    <div className='category detailEl'>
-                        <div className='textInfo'>Категроии: </div>
-                        <div className='contentInfo'>
-                            {comix.genre.map((gen, index) => (
-                                <div className="tag" key={index}>{gen}</div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className='detailTags detailEl'>
-                        <div className='textInfo'>Теги: </div>
-                        <div className='contentInfo'>
-                            {comix.tags.map((tag, index) => (
-                                <div className="tag" key={index}>{tag}</div>
-                            ))}
-                        </div>
+            <div className='additionalDesc'>
 
-                    </div>
-                    <div className='desc detailEl'>
-                        <div className='textInfo'>Описание: </div>
-                        <div className='contentInfo'>{comix.description}</div>
+
+
+                <div className='translation detailEl'>
+                    <div className='textInfo'>Переводчики</div>
+                    <div className='contentInfo'>
+                        {comix.translations.map((translation, index) => (
+                            <div className="tag" key={index}>{translation}</div>
+                        ))}
                     </div>
                 </div>
 
 
+                <div className='publisher detailEl'>
+                    <div className='textInfo'>Автор: </div>
+
+                    <div className='contentInfo'>{comix.publisher}</div>
+
+
+                </div>
+
+                <div className='category detailEl'>
+                    <div className='textInfo'>Категроии: </div>
+                    <div className='contentInfo'>
+                        {comix.genre.map((gen, index) => (
+                            <div className="tag" key={index}>{gen}</div>
+                        ))}
+                    </div>
+                </div>
+                <div className='detailTags detailEl'>
+                    <div className='textInfo'>Теги: </div>
+                    <div className='contentInfo'>
+                        {comix.tags.map((tag, index) => (
+                            <div className="tag" key={index}>{tag}</div>
+                        ))}
+                    </div>
+
+                </div>
+                <div className='desc detailEl'>
+                    <div className='textInfo'>Описание: </div>
+                    <div className='contentInfo'>{comix.description}</div>
+                </div>
+
+
             </div>
+
+
+
+
 
             <div className='comixContent'>
                 {comix.images.map((image, index) => (

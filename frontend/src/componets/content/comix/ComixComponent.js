@@ -12,8 +12,8 @@ const Comix = ({ comix }) => {
           <p>{comix.title}</p>
         </div>
         <div className='tags'>
-          {comix.tags.map(tag => (
-            <div className='tag'>{tag}</div>
+          {comix.tags.map((tag, index) => (
+            <div className='tag' key={index}>{tag}</div>
           ))}
         </div>
       </div>
